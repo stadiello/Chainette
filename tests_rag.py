@@ -1,5 +1,9 @@
 from rag.graph_builder import GraphBuilder
 from rag.node import Node
+import matplotlib.pyplot as plt
+import networkx as nx
+
+
 
 # Embeddings fictifs
 embedding_a = [1.0, 0.0, 0.0]
@@ -22,3 +26,6 @@ builder.add_node(node_c)
 print("Voisins de A:", builder.get_neighbors("A"))
 print("Voisins de B:", builder.get_neighbors("B"))
 print("Voisins de C:", builder.get_neighbors("C"))
+
+nx.draw(builder.graph, with_labels=True)
+plt.show()
