@@ -1,6 +1,5 @@
 import numpy as np
 from typing import List
-from rag.node import Node
 
 class GraphRetriever:
     def __init__(self, graph_builder, embedding_model, top_k=3, expand_neighbors=True):
